@@ -12,7 +12,15 @@
 html {
     font-size: 62.5%;
     box-sizing: border-box;  /*Hack Box Model*/
-    background-image: linear-gradient(to top, var(--grisclaro) 0%, var(--blanco) 100%);
+    scroll-snap-type: y mandatory;
+}
+
+/* Scroll Snap: para que se detenga en cada seccíon de la página web*/
+.navegacion-principal,
+.servicios,
+.formulario {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
 }
 
 *, *:before, *:after {
@@ -22,6 +30,7 @@ html {
 body {
     font-size: 16px; /*1rem= 10px*/
     font-family: "Krub", sans-serif;
+    background-image: linear-gradient(to top, var(--grisclaro) 0%, var(--blanco) 100%);
 }
 
 .sombra {
